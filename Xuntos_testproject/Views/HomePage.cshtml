@@ -15,7 +15,13 @@
 			<section id="one" class="wrapper style1">
 				<div class="inner">
 					<article class="feature left">
-						<span class="image"><img src="images/pic02.jpg" alt="" /></span>
+					    @{
+                            var articleImg = Model.Value<IPublishedContent>("firstArticleImage", fallback: Fallback.ToAncestors);
+                            bool hasarticleImg = articleImg!=null;
+                        }
+                        @if (hasarticleImg){
+						    <span class="image"><img src="@articleImg.Url" alt="" /></span>
+                        }else {}
 						<div class="content">
 							<h2>@Model.Value("firstArticleTitle")</h2>
 							<p>@Model.Value("firstArticleParagraph")</p>
@@ -29,7 +35,13 @@
 						</div>
 					</article>
 					<article class="feature right">
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+					    @{
+                            var articleImg2 = Model.Value<IPublishedContent>("secondArticleImage", fallback: Fallback.ToAncestors);
+                            bool hasarticleImg2 = articleImg!=null;
+                        }
+                        @if (hasarticleImg2){
+						    <span class="image"><img src="@articleImg2.Url" alt="" /></span>
+                        }else {}
 						<div class="content">
 							<h2>@Model.Value("secondArticleTitle")</h2>
 							<p>@Model.Value("secondArticleParagraph")</p>

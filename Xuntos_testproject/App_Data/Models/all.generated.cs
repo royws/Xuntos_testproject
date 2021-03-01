@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "34bb1300b946fbad")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6246f0c9ccad422c")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -69,6 +69,13 @@ namespace Umbraco.Web.PublishedModels
 		public global::System.Web.IHtmlString BodyText => this.Value<global::System.Web.IHtmlString>("bodyText");
 
 		///<summary>
+		/// First Article Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		[ImplementPropertyType("firstArticleImage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent FirstArticleImage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("firstArticleImage");
+
+		///<summary>
 		/// First Article Paragraph
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
@@ -95,6 +102,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
 		[ImplementPropertyType("pageTitle")]
 		public string PageTitle => this.Value<string>("pageTitle");
+
+		///<summary>
+		/// Second Article Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		[ImplementPropertyType("secondArticleImage")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent SecondArticleImage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("secondArticleImage");
 
 		///<summary>
 		/// Second Article Paragraph
