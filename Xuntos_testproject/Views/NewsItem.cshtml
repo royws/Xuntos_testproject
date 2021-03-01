@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.NewsItem>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "MasterAlternateNavbar.cshtml";
+}
+
+<!-- Main -->
+<section id="main" class="wrapper">
+    <div class="container">
+
+        <header class="major special">
+			<h2>@Model.Value("newsItemTitle")</h2>
+		    <p>@Model.Value("newsItemContent")</p>
+        </header>
+        
+        <a href="#"><img class="center" src="/images/pic02.jpg" alt="" /></a>
+    </div>
+</section>
