@@ -31,10 +31,10 @@
 		<!-- Nav -->
             <nav id="nav">
                 <ul class="links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/contact">Contact Page</a></li>
-                    <li><a href="/news">News</a></li>
-                    <li><a href="/crud">Crud</a></li>
+                    <li><a href="@Model.Value("homePageLink")">@Model.Value("homePageName", fallback: Fallback.ToAncestors)</a></li>
+                    <li><a href="@Model.Value("contactPageLink", fallback: Fallback.ToAncestors)">@Model.Value("contactPageName", fallback: Fallback.ToAncestors)</a></li>
+                    <li><a href="@Model.Value("newsPageLink", fallback: Fallback.ToAncestors)">@Model.Value("newsPageName", fallback: Fallback.ToAncestors)</a></li>
+                    <li><a href="@Model.Value("elasticPageLink", fallback: Fallback.ToAncestors)">@Model.Value("elasticPageName", fallback: Fallback.ToAncestors)</a></li>
                 </ul>
             </nav>
 

@@ -29,7 +29,7 @@
 							<br>
 							<ul class="actions">
 								<li>
-									<a href="/news" class="button alt">News</a>
+									<a href="@Model.Value("newsPageLink", fallback: Fallback.ToAncestors)" class="button alt">@Model.Value("newsPageName", fallback: Fallback.ToAncestors)</a>
 								</li>
 							</ul>
 						</div>
@@ -47,7 +47,7 @@
 							<p>@Model.Value("secondArticleParagraph")</p>
 							<ul class="actions">
 								<li>
-									<a href="/crud" class="button alt">Crud</a>
+								    <a href="@Model.Value("elasticPageLink", fallback: Fallback.ToAncestors)" class="button alt">@Model.Value("elasticPageName", fallback: Fallback.ToAncestors)</a>
 								</li>
 							</ul>
 						</div>
@@ -59,22 +59,18 @@
 			<section id="two" class="wrapper special">
 				<div class="inner">
 					<header class="major narrow">
-						<h2>Aliquam Blandit Mauris</h2>
-						<p>Ipsum dolor tempus commodo turpis adipiscing Tempor placerat sed amet accumsan</p>
+						<h2>Umbraco Media</h2>
+						<p>Images below are placed with the multi-mediapicker</p>
 					</header>
 					<div class="image-grid">
-						<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic10.jpg" alt="" /></a>
+                        @{
+                            var imageList = Model.Value<IEnumerable<IPublishedContent>>("sectionTwoImages");
+                        }
+                        
+                        @foreach (var image in imageList) {
+                            <a href="#" class="image"><img src="@image.Url" alt= "@image.Name image"/></a>
+                        }
 					</div>
-					<ul class="actions">
-						<li><a href="#" class="button big alt">Tempus Aliquam</a></li>
-					</ul>
 				</div>
 			</section>
 
