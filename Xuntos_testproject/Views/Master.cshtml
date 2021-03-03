@@ -34,7 +34,7 @@
                     <li><a href="@Model.Value("homePageLink")">@Model.Value("homePageName", fallback: Fallback.ToAncestors)</a></li>
                     <li><a href="@Model.Value("contactPageLink", fallback: Fallback.ToAncestors)">@Model.Value("contactPageName", fallback: Fallback.ToAncestors)</a></li>
                     <li><a href="@Model.Value("newsPageLink", fallback: Fallback.ToAncestors)">@Model.Value("newsPageName", fallback: Fallback.ToAncestors)</a></li>
-                    <li><a href="@Model.Value("elasticPageLink", fallback: Fallback.ToAncestors)">@Model.Value("elasticPageName", fallback: Fallback.ToAncestors)</a></li>
+                    <li><a href="@Model.Value("apiPageLink", fallback: Fallback.ToAncestors)">@Model.Value("apiPageName", fallback: Fallback.ToAncestors)</a></li>
                 </ul>
             </nav>
 
@@ -71,6 +71,5 @@
 			<script src="/scripts/util.js"></script>
 			<!--[if lte IE 8]><script src="/scripts/ie/respond.min.js"></script><![endif]-->
 			<script src="/scripts/main.js"></script>
-
 	</body>
 </html>

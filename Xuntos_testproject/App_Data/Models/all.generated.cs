@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "97391b0bc5bc33c")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "72fd02bdb2fdd197")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -40,6 +40,39 @@ using  Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedModels
 {
+	/// <summary>ApiPage</summary>
+	[PublishedModel("apiPage")]
+	public partial class ApiPage : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public new const string ModelTypeAlias = "apiPage";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ApiPage, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public ApiPage(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Api page title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("apiPageTitle")]
+		public string ApiPageTitle => this.Value<string>("apiPageTitle");
+	}
+
 	/// <summary>HomePage</summary>
 	[PublishedModel("homePage")]
 	public partial class HomePage : PublishedContentModel
@@ -218,6 +251,20 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Api Page Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("apiPageLink")]
+		public string ApiPageLink => this.Value<string>("apiPageLink");
+
+		///<summary>
+		/// Api Page Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("apiPageName")]
+		public string ApiPageName => this.Value<string>("apiPageName");
+
+		///<summary>
 		/// Contact Page Link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -230,20 +277,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("contactPageName")]
 		public string ContactPageName => this.Value<string>("contactPageName");
-
-		///<summary>
-		/// Elastic Page Link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageLink")]
-		public string ElasticPageLink => this.Value<string>("elasticPageLink");
-
-		///<summary>
-		/// Elastic Page Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageName")]
-		public string ElasticPageName => this.Value<string>("elasticPageName");
 
 		///<summary>
 		/// Home Page Link
@@ -392,39 +425,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("pageTitle")]
 		public string PageTitle => this.Value<string>("pageTitle");
-	}
-
-	/// <summary>ApiPage</summary>
-	[PublishedModel("apiPage")]
-	public partial class ApiPage : PublishedContentModel
-	{
-		// helpers
-#pragma warning disable 0109 // new is redundant
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "apiPage";
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new static IPublishedContentType GetModelContentType()
-			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ApiPage, TValue>> selector)
-			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-#pragma warning restore 0109
-
-		// ctor
-		public ApiPage(IPublishedContent content)
-			: base(content)
-		{ }
-
-		// properties
-
-		///<summary>
-		/// Api page title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("apiPageTitle")]
-		public string ApiPageTitle => this.Value<string>("apiPageTitle");
 	}
 
 	/// <summary>Folder</summary>

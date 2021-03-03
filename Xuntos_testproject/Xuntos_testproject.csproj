@@ -194,6 +194,9 @@
     <Reference Include="Superpower, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aec39280ded1b3a7, processorArchitecture=MSIL">
       <HintPath>..\packages\Superpower.2.0.0\lib\net45\Superpower.dll</HintPath>
     </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
       <Private>True</Private>
@@ -422,6 +425,9 @@
     <Reference Include="uSync8.Core, Version=8.8.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\uSync.Core.8.8.3\lib\net472\uSync8.Core.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -432,34 +438,6 @@
     <Content Include="App_Data\Umbraco.sdf" />
     <Content Include="App_Plugins\CustomWelcomeDashboard\lang\en-US.xml" />
     <Content Include="App_Plugins\CustomWelcomeDashboard\WelcomeDashboard.html" />
-    <Content Include="App_Plugins\OsmMaps\assets\css\osmmaps.css" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\layers-2x.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\layers.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\marker-icon-2x.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\marker-icon.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\marker-shadow.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\leaflet-src.js" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\leaflet.css" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\leaflet.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\da-dk.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\de-de.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\en-gb.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\en-us.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\es-es.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\fr-fr.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\he-il.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\it-it.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\ja-jp.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\ko-kr.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\nb-no.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\nl-nl.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\pl-pl.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\pt-br.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\ru-ru.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\sv-se.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\zh-cn.js" />
-    <Content Include="App_Plugins\OsmMaps\OsmMaps.controller.js" />
-    <Content Include="App_Plugins\OsmMaps\OsmMaps.html" />
     <Content Include="App_Plugins\uSync8\backoffice\uSync8\dashboard.html" />
     <Content Include="App_Plugins\uSync8\backoffice\uSync8\uSyncDashboardController.js" />
     <Content Include="App_Plugins\uSync8\changeDialog.html" />
@@ -505,6 +483,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\Filters\UmbracoSwaggerFilter.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="Components\RoutingSettingsComponent.cs" />
     <Compile Include="Composer\UmbracoComposer.cs" />
     <Compile Include="Controllers\ProgrammingLanguageController.cs" />
@@ -526,7 +506,6 @@
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="config\uSync8.config" />
     <Content Include="App_Plugins\CustomWelcomeDashboard\package.manifest" />
-    <Content Include="App_Plugins\OsmMaps\package.manifest" />
     <Content Include="App_Plugins\uSync8\package.manifest" />
     <Content Include="App_Plugins\uSync8\addons.json" />
     <None Include="packages.config" />

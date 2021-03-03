@@ -22,54 +22,29 @@
         				<th>Experience</th>
         			</tr>
         		</thead>
-        		<tbody>
-        			<tr>
-        				<td>Item 1</td>
-        				<td>Ante turpis integer aliquet porttitor.</td>
-        			</tr>
-        			<tr>
-        				<td>Item 2</td>
-        				<td>Vis ac commodo adipiscing arcu aliquet.</td>
-        			</tr>
+        		<tbody id="apitable">
         		</tbody>
         	</table>
         </div
-    
-    <!-- Buttons -->
-        <h3>Buttons</h3>
-        <ul class="actions">
-        	<li><a href="#" class="button special">Special</a></li>
-        	<li><a href="#" class="button">Default</a></li>
-        	<li><a href="#" class="button alt">Alternate</a></li>
-        </ul>
-        <ul class="actions">
-        	<li><a href="#" class="button special big">Big</a></li>
-        	<li><a href="#" class="button">Default</a></li>
-        	<li><a href="#" class="button alt small">Small</a></li>
-        </ul>
-        <div class="row">
-        	<div class="6u 12u$(xsmall)">
-        		<ul class="actions fit">
-        			<li><a href="#" class="button fit">Fit</a></li>
-        			<li><a href="#" class="button alt fit">Fit</a></li>
-        		</ul>
-        	</div>
-        	<div class="6u$ 12u$(xsmall)">
-        		<ul class="actions fit small">
-        			<li><a href="#" class="button fit small">Fit + Small</a></li>
-        			<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-        		</ul>
-        	</div>
-        </div>
-        <ul class="actions">
-        	<li><a href="#" class="button special icon fa-download">Icon</a></li>
-        	<li><a href="#" class="button icon fa-download">Icon</a></li>
-        	<li><a href="#" class="button alt icon fa-download">Icon</a></li>
-        </ul>
-        <ul class="actions">
-        	<li><span class="button special disabled">Special</span></li>
-        	<li><span class="button disabled">Default</span></li>
-        	<li><span class="button alt disabled">Alternate</span></li>
-        </ul>
+        
+        <!-- Form -->
+		<section>
+		    <h4>Add table entry &#64; <a href="/api/create/programminglanguage"> /api/create/programminglanguage </a></h4>
+			<form method="post" action="javascript:;" onsubmit="postTableEntry(name,experience)">
+				<div class="row uniform 50%">
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="name" id="name" value="" placeholder="Name" required/>
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+						<input type="text" name="experience" id="experience" value="" placeholder="Experience" required/>
+					</div>
+					<div class="12u$">
+						<ul class="actions">
+							<li><input type="submit" value="Add" class="special" /></li>
+						</ul>
+					</div>
+				</div>
+			</form>
+		</section>
     </div>
 </section>

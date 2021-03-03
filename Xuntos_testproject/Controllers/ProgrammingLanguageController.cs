@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 using Umbraco.Web.WebApi;
 using Xuntos_testproject.Models;
-using Newtonsoft.Json;
-using System.Net;
-using System.Net.Http;
-using System.Data.Entity;
 using Xuntos_testproject.Database;
 
 namespace Xuntos_testproject.Controllers
@@ -20,11 +13,6 @@ namespace Xuntos_testproject.Controllers
         {
             _context = context;
         }
-      /*  private static List<ProgrammingLanguage> languages = new List<ProgrammingLanguage>()
-        {
-            new ProgrammingLanguage("C#", "Used during Mediatechnology study and while building Xamarin Apps at previous job"),
-            new ProgrammingLanguage("JavaScript", "Used for various applications, with the Angular framework or seperate libraries")
-        };*/
 
         [HttpGet]
         [Route("api/programminglanguages")]
@@ -43,6 +31,28 @@ namespace Xuntos_testproject.Controllers
                 if (ModelState.IsValid)
                 {
                     _context.PostProgrammingLanguage(language);
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest(ModelState);
+                }
+            }
+            catch (Exception)
+            {
+                return BadRequest(ModelState);
+            }
+        }
+
+        [HttpDelete]
+        [Route("api/remove/programminglanguage")]
+        public IHttpActionResult DeleteProgrammingLanguage([FromBody] ProgrammingLanguage language)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.DeleteProgrammingLanguage(language);
                     return Ok();
                 }
                 else
