@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "498d796ed4868064")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "97391b0bc5bc33c")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -66,6 +66,20 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Api Page Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("apiPageLink")]
+		public string ApiPageLink => this.Value<string>("apiPageLink");
+
+		///<summary>
+		/// Api Page Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("apiPageName")]
+		public string ApiPageName => this.Value<string>("apiPageName");
+
+		///<summary>
 		/// Body Text: The main content of the page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -85,20 +99,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("contactPageName")]
 		public string ContactPageName => this.Value<string>("contactPageName");
-
-		///<summary>
-		/// Elastic Page Link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageLink")]
-		public string ElasticPageLink => this.Value<string>("elasticPageLink");
-
-		///<summary>
-		/// Elastic Page Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageName")]
-		public string ElasticPageName => this.Value<string>("elasticPageName");
 
 		///<summary>
 		/// First Article Image
@@ -192,44 +192,86 @@ namespace Umbraco.Web.PublishedModels
 		public IEnumerable<IPublishedContent> SectionTwoImages => this.Value<IEnumerable<IPublishedContent>>("sectionTwoImages");
 	}
 
-	/// <summary>Simple Content Page</summary>
-	[PublishedModel("simpleContentPage")]
-	public partial class SimpleContentPage : PublishedContentModel
+	/// <summary>Navbar links</summary>
+	[PublishedModel("navbarLinks")]
+	public partial class NavbarLinks : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "simpleContentPage";
+		public new const string ModelTypeAlias = "navbarLinks";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SimpleContentPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<NavbarLinks, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public SimpleContentPage(IPublishedContent content)
+		public NavbarLinks(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Body Text: Text of the body
+		/// Contact Page Link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("bodyText")]
-		public IHtmlString BodyText => this.Value<IHtmlString>("bodyText");
+		[ImplementPropertyType("contactPageLink")]
+		public string ContactPageLink => this.Value<string>("contactPageLink");
 
 		///<summary>
-		/// Page Title: Title of the page
+		/// Contact Page Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle => this.Value<string>("pageTitle");
+		[ImplementPropertyType("contactPageName")]
+		public string ContactPageName => this.Value<string>("contactPageName");
+
+		///<summary>
+		/// Elastic Page Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("elasticPageLink")]
+		public string ElasticPageLink => this.Value<string>("elasticPageLink");
+
+		///<summary>
+		/// Elastic Page Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("elasticPageName")]
+		public string ElasticPageName => this.Value<string>("elasticPageName");
+
+		///<summary>
+		/// Home Page Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("homePageLink")]
+		public string HomePageLink => this.Value<string>("homePageLink");
+
+		///<summary>
+		/// Home Page Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("homePageName")]
+		public string HomePageName => this.Value<string>("homePageName");
+
+		///<summary>
+		/// News Page Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("newsPageLink")]
+		public string NewsPageLink => this.Value<string>("newsPageLink");
+
+		///<summary>
+		/// News Page Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("newsPageName")]
+		public string NewsPageName => this.Value<string>("newsPageName");
 	}
 
 	/// <summary>News Item</summary>
@@ -312,126 +354,77 @@ namespace Umbraco.Web.PublishedModels
 		public string NewsTitle => this.Value<string>("newsTitle");
 	}
 
-	/// <summary>Elastic search page</summary>
-	[PublishedModel("elasticSearchPage")]
-	public partial class ElasticSearchPage : PublishedContentModel
+	/// <summary>Simple Content Page</summary>
+	[PublishedModel("simpleContentPage")]
+	public partial class SimpleContentPage : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "elasticSearchPage";
+		public new const string ModelTypeAlias = "simpleContentPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ElasticSearchPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SimpleContentPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ElasticSearchPage(IPublishedContent content)
+		public SimpleContentPage(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Elastic Page Content
+		/// Body Text: Text of the body
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageContent")]
-		public IHtmlString ElasticPageContent => this.Value<IHtmlString>("elasticPageContent");
+		[ImplementPropertyType("bodyText")]
+		public IHtmlString BodyText => this.Value<IHtmlString>("bodyText");
 
 		///<summary>
-		/// Elastic Page Title
+		/// Page Title: Title of the page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageTitle")]
-		public string ElasticPageTitle => this.Value<string>("elasticPageTitle");
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle => this.Value<string>("pageTitle");
 	}
 
-	/// <summary>Navbar links</summary>
-	[PublishedModel("navbarLinks")]
-	public partial class NavbarLinks : PublishedContentModel
+	/// <summary>ApiPage</summary>
+	[PublishedModel("apiPage")]
+	public partial class ApiPage : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "navbarLinks";
+		public new const string ModelTypeAlias = "apiPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<NavbarLinks, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ApiPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public NavbarLinks(IPublishedContent content)
+		public ApiPage(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Contact Page Link
+		/// Api page title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("contactPageLink")]
-		public string ContactPageLink => this.Value<string>("contactPageLink");
-
-		///<summary>
-		/// Contact Page Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("contactPageName")]
-		public string ContactPageName => this.Value<string>("contactPageName");
-
-		///<summary>
-		/// Elastic Page Link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageLink")]
-		public string ElasticPageLink => this.Value<string>("elasticPageLink");
-
-		///<summary>
-		/// Elastic Page Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("elasticPageName")]
-		public string ElasticPageName => this.Value<string>("elasticPageName");
-
-		///<summary>
-		/// Home Page Link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("homePageLink")]
-		public string HomePageLink => this.Value<string>("homePageLink");
-
-		///<summary>
-		/// Home Page Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("homePageName")]
-		public string HomePageName => this.Value<string>("homePageName");
-
-		///<summary>
-		/// News Page Link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("newsPageLink")]
-		public string NewsPageLink => this.Value<string>("newsPageLink");
-
-		///<summary>
-		/// News Page Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("newsPageName")]
-		public string NewsPageName => this.Value<string>("newsPageName");
+		[ImplementPropertyType("apiPageTitle")]
+		public string ApiPageTitle => this.Value<string>("apiPageTitle");
 	}
 
 	/// <summary>Folder</summary>
