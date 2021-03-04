@@ -11,7 +11,7 @@ function fillTable(){
         data = receivedData
         var html = '';
         for(var i = 0; i < data.length; i++)
-                    html += '<tr><td>' + data[i].Name + '</td><td>' + data[i].Experience + '</td><td><a href="javascript:void(0);" class="button" id=' + i + '>Remove</a></td></tr>';
+                    html += '<tr><td>' + data[i].Name + '</td><td>' + data[i].Experience + '</td><td><a href="javascript:void(0);" class="button fit" id=' + i + '>Remove</a></td></tr>';
         $('#apitable').append(html);
     });
 }

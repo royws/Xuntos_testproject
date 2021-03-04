@@ -20,7 +20,6 @@ namespace Xuntos_testproject.Database
                 CreateProgrammingLanguageTable();
             }
         }
-
         public IList<ProgrammingLanguage> GetProgrammingLanguages()
         {
             var SQL = "SELECT * FROM ProgrammingLanguage";
