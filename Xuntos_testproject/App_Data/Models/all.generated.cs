@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f11edda0c5a18157")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c33cbf54be529af7")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -218,11 +218,46 @@ namespace Umbraco.Web.PublishedModels
 		public string SecondArticleTitle => this.Value<string>("secondArticleTitle");
 
 		///<summary>
+		/// Section Three Body Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("sectionThreeBodyText")]
+		public IHtmlString SectionThreeBodyText => this.Value<IHtmlString>("sectionThreeBodyText");
+
+		///<summary>
+		/// Section Three Link Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("sectionThreeLinkText")]
+		public string SectionThreeLinkText => this.Value<string>("sectionThreeLinkText");
+
+		///<summary>
+		/// Section Three Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("sectionThreeTitle")]
+		public string SectionThreeTitle => this.Value<string>("sectionThreeTitle");
+
+		///<summary>
+		/// Section Two Body Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("sectionTwoBodyText")]
+		public IHtmlString SectionTwoBodyText => this.Value<IHtmlString>("sectionTwoBodyText");
+
+		///<summary>
 		/// Section Two Images
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("sectionTwoImages")]
 		public IEnumerable<IPublishedContent> SectionTwoImages => this.Value<IEnumerable<IPublishedContent>>("sectionTwoImages");
+
+		///<summary>
+		/// SectionTwoTitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("sectionTwoTitle")]
+		public string SectionTwoTitle => this.Value<string>("sectionTwoTitle");
 	}
 
 	/// <summary>Navbar links</summary>

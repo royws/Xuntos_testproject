@@ -59,8 +59,8 @@
 			<section id="two" class="wrapper special">
 				<div class="inner">
 					<header class="major narrow">
-						<h2>Umbraco Media</h2>
-						<p>Images below are placed with the multi-mediapicker</p>
+						<h2>@Model.Value("sectionTwoTitle")</h2>
+						<p>@Model.Value("sectionTwoBodyText")</p>
 					</header>
 					<div class="image-grid">
                         @{
@@ -78,11 +78,11 @@
 			<section id="three" class="wrapper style3 special">
 				<div class="inner">
 					<header class="major narrow	">
-						<h2>Magna sed consequat tempus</h2>
-						<p>Ipsum dolor tempus commodo turpis adipiscing Tempor placerat sed amet accumsan</p>
+				        <h2>@Model.Value("sectionThreeTitle")</h2>
+						<p>@Model.Value("sectionThreeBodyText")</p>
 					</header>
 					<ul class="actions">
-						<li><a href="#" class="button big alt">Magna feugiat</a></li>
+						<li><a href="http://37.97.203.154/" class="button big alt">@Model.Value("sectionThreeLinkText")</a></li>
 					</ul>
 				</div>
 			</section>

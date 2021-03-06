@@ -20,7 +20,7 @@ function postTableEntry(name,experience){
     const dataToSend = JSON.stringify({"Name": name.value, "Experience": experience.value});
     $.ajax({
         type: 'POST',
-        url: '/api/create/programminglanguage',
+        url: url,
         data: dataToSend, 
         contentType: "application/json",
         dataType: 'json',
@@ -34,7 +34,7 @@ function removeTableEntry(arrElement){
     const dataToSend = JSON.stringify({"Id": data[arrElement].Id , "Name": data[arrElement].Name, "Experience": data[arrElement].Experience});
     console.log(dataToSend);
     $.ajax({
-        url: 'api/remove/programminglanguage',
+        url: url,
         type: 'DELETE',
         data: dataToSend,
         contentType:'application/json',  

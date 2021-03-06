@@ -23,7 +23,7 @@ namespace Xuntos_testproject.Controllers
         }
 
         [HttpPost]
-        [Route("api/create/programminglanguage")]
+        [Route("api/programminglanguages")]
         public IHttpActionResult PostProgrammingLanguage([FromBody]ProgrammingLanguage language)
         {
             try
@@ -45,7 +45,7 @@ namespace Xuntos_testproject.Controllers
         }
 
         [HttpDelete]
-        [Route("api/remove/programminglanguage")]
+        [Route("api/programminglanguages")]
         public IHttpActionResult DeleteProgrammingLanguage([FromBody] ProgrammingLanguage language)
         {
             try
